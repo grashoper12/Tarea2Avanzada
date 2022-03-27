@@ -10,7 +10,7 @@ namespace Tarea2.Repository
     public class ClientesRepository
     {
         private ClientesModel[] clientes = new ClientesModel[20];
-        private int Cantidad = 0;
+        public int Cantidad = 0;
 
         private ClientesRepository() { }
 
@@ -41,7 +41,7 @@ namespace Tarea2.Repository
 
             try
             {
-                if (GetById(clientesModel.Identificacion) != null) return "El cliente ya esta registrado";
+                if (GetById(clientesModel.Identificacion).Identificacion != null) return "El cliente ya esta registrado";
 
                 if (Cantidad < 20)
                 {
@@ -75,10 +75,19 @@ namespace Tarea2.Repository
         {
             try
             {
-                if(clientes != null)
-                return clientes.Where(x => x.Identificacion == identificacion).FirstOrDefault();
+                ClientesModel cli = new ClientesModel();
 
-                return null;
+                for (int i = 0; i < this.Cantidad; i++)
+                {
+                    if (clientes[i].Identificacion == identificacion)
+                    {
+                        cli = clientes[i];
+                        break;
+                    }
+                }
+                
+
+                return cli;
             }
             catch (Exception)
             {

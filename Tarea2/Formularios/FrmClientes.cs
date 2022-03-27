@@ -40,8 +40,9 @@ namespace Tarea2.Formularios
                 clientesModel.Nombre = TxtNomb.Text;
                 clientesModel.PrimerApellido = TxtPape.Text;
                 clientesModel.SegundoApellido = TxtSape.Text;
-                clientesRepository.Insert(clientesModel);
+                string msj = clientesRepository.Insert(clientesModel);
                 DisplayDataClient();
+                MessageBox.Show(msj);
             }
             catch (Exception ex)
             {
@@ -74,11 +75,7 @@ namespace Tarea2.Formularios
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 form = new Form1();
-            form.Show();
-        }
+      
     }
 
 }
