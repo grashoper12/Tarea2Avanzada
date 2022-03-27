@@ -29,75 +29,87 @@ namespace Tarea2.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtIdAfiliacionConsulSedClientes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtClienteConsulSedClientes = new System.Windows.Forms.TextBox();
             this.DtgConsulSedClientes = new System.Windows.Forms.DataGridView();
             this.BtnConsultarSedClientes = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DtgConsulSedClientes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(255, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Id Afiliacion:";
-            // 
-            // TxtIdAfiliacionConsulSedClientes
-            // 
-            this.TxtIdAfiliacionConsulSedClientes.Location = new System.Drawing.Point(325, 26);
-            this.TxtIdAfiliacionConsulSedClientes.Name = "TxtIdAfiliacionConsulSedClientes";
-            this.TxtIdAfiliacionConsulSedClientes.Size = new System.Drawing.Size(100, 20);
-            this.TxtIdAfiliacionConsulSedClientes.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 74);
+            this.label2.Location = new System.Drawing.Point(42, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cliente:";
             // 
-            // TxtClienteConsulSedClientes
-            // 
-            this.TxtClienteConsulSedClientes.Location = new System.Drawing.Point(325, 71);
-            this.TxtClienteConsulSedClientes.Name = "TxtClienteConsulSedClientes";
-            this.TxtClienteConsulSedClientes.Size = new System.Drawing.Size(100, 20);
-            this.TxtClienteConsulSedClientes.TabIndex = 3;
-            // 
             // DtgConsulSedClientes
             // 
             this.DtgConsulSedClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DtgConsulSedClientes.Location = new System.Drawing.Point(233, 173);
+            this.DtgConsulSedClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.DtgConsulSedClientes.Location = new System.Drawing.Point(29, 91);
             this.DtgConsulSedClientes.Name = "DtgConsulSedClientes";
-            this.DtgConsulSedClientes.Size = new System.Drawing.Size(240, 150);
+            this.DtgConsulSedClientes.Size = new System.Drawing.Size(442, 150);
             this.DtgConsulSedClientes.TabIndex = 4;
             // 
             // BtnConsultarSedClientes
             // 
-            this.BtnConsultarSedClientes.Location = new System.Drawing.Point(325, 125);
+            this.BtnConsultarSedClientes.Location = new System.Drawing.Point(396, 46);
             this.BtnConsultarSedClientes.Name = "BtnConsultarSedClientes";
             this.BtnConsultarSedClientes.Size = new System.Drawing.Size(75, 23);
             this.BtnConsultarSedClientes.TabIndex = 5;
             this.BtnConsultarSedClientes.Text = "Consultar";
             this.BtnConsultarSedClientes.UseVisualStyleBackColor = true;
+            this.BtnConsultarSedClientes.Click += new System.EventHandler(this.BtnConsultarSedClientes_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(90, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(270, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID Sede";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Telefono";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Direccion";
+            this.Column4.Name = "Column4";
             // 
             // FrmConsultar_Sedes_de_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 260);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BtnConsultarSedClientes);
             this.Controls.Add(this.DtgConsulSedClientes);
-            this.Controls.Add(this.TxtClienteConsulSedClientes);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtIdAfiliacionConsulSedClientes);
-            this.Controls.Add(this.label1);
             this.Name = "FrmConsultar_Sedes_de_Clientes";
             this.Text = "FrmConsultar_Sedes_de_Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.DtgConsulSedClientes)).EndInit();
@@ -107,12 +119,13 @@ namespace Tarea2.Formularios
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtIdAfiliacionConsulSedClientes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtClienteConsulSedClientes;
         private System.Windows.Forms.DataGridView DtgConsulSedClientes;
         private System.Windows.Forms.Button BtnConsultarSedClientes;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

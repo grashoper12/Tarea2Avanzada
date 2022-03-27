@@ -54,6 +54,7 @@ namespace Tarea2.Formularios
             // 
             // CmbConsultaClientes
             // 
+            this.CmbConsultaClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbConsultaClientes.FormattingEnabled = true;
             this.CmbConsultaClientes.Items.AddRange(new object[] {
             "Seleccione"});

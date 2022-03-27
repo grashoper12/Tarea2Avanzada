@@ -44,22 +44,43 @@ namespace Tarea2.Repository
         /// </summary>
         /// <param name="cliente"></param>
         /// <returns></returns>
-        public AfiliciacionSedeModel GetAfiliacionByCliente(ClientesModel cliente)
+        public SedesModel[] GetAfiliacionByCliente(ClientesModel cliente)
         {
             try
             {
-                return afiliaciones.Where(x => x.clientesModel.Identificacion == cliente.Identificacion).FirstOrDefault();
-                //for (int i = 0; i < Cantidad; i++)
-                //{
-                //    if (afiliaciones[i].clientesModel.Identificacion == cliente.Identificacion)
-                //    {
-                //        return afiliaciones[i];
-                //    }
-                //}
-                //return null;
+                
+                for (int i = 0; i < Cantidad; i++)
+                {
+
+                    if (afiliaciones[i].clientesModel.Identificacion == cliente.Identificacion)
+                    {
+                        return afiliaciones[i].sedesModel;
+                    }
+                }
+                return null;
             }
             catch (Exception)
             {
+                throw;
+            }
+        }
+
+        private AfiliciacionSedeModel GetById(int IdAfiliacion)
+        {
+            try
+            {
+                for (int i = 0; i < Cantidad; i++)
+                {
+                    if (afiliaciones[i].IdAfiliacion == IdAfiliacion)
+                    {
+                        return afiliaciones[i];
+                    }
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

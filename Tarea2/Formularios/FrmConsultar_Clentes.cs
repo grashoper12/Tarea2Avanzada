@@ -28,6 +28,8 @@ namespace Tarea2.Formularios
             try
             {
                 ClientesModel cli2 = (ClientesModel)this.CmbConsultaClientes.SelectedItem;
+                if (this.CmbConsultaClientes.Items.Count == 0) return;
+
                 ClientesModel cli = repo.GetById(cli2.Identificacion);
 
                 this.DtgConsultarClientes.Rows.Clear();
@@ -56,13 +58,13 @@ namespace Tarea2.Formularios
 
                 if (list != null)
                 {
-                   
-                        this.CmbConsultaClientes.DisplayMember = "Nombre";
-                        this.CmbConsultaClientes.ValueMember = "Identificacion";
-                        this.CmbConsultaClientes.DataSource = list;
-                    
-                    
+                    this.CmbConsultaClientes.DisplayMember = "Nombre";
+                    this.CmbConsultaClientes.DisplayMember = "Identificacion";
+                    this.CmbConsultaClientes.DataSource = list;
                 }
+
+
+
             }
             catch { }
         }

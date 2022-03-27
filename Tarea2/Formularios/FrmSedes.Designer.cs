@@ -40,12 +40,19 @@ namespace Tarea2.Formularios
             this.TxtNumTelefono = new System.Windows.Forms.TextBox();
             this.CmbEstadoSede = new System.Windows.Forms.ComboBox();
             this.BtnGuardarSede = new System.Windows.Forms.Button();
+            this.dgvSedes = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSedes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(270, 42);
+            this.label1.Location = new System.Drawing.Point(98, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -53,15 +60,15 @@ namespace Tarea2.Formularios
             // 
             // TxtIdSede
             // 
-            this.TxtIdSede.Location = new System.Drawing.Point(342, 42);
+            this.TxtIdSede.Location = new System.Drawing.Point(151, 26);
             this.TxtIdSede.Name = "TxtIdSede";
-            this.TxtIdSede.Size = new System.Drawing.Size(121, 20);
+            this.TxtIdSede.Size = new System.Drawing.Size(292, 20);
             this.TxtIdSede.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 87);
+            this.label2.Location = new System.Drawing.Point(98, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
@@ -70,7 +77,7 @@ namespace Tarea2.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 126);
+            this.label3.Location = new System.Drawing.Point(90, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 3;
@@ -79,7 +86,7 @@ namespace Tarea2.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(270, 159);
+            this.label4.Location = new System.Drawing.Point(98, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 4;
@@ -88,7 +95,7 @@ namespace Tarea2.Formularios
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(270, 194);
+            this.label5.Location = new System.Drawing.Point(79, 130);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 5;
@@ -96,52 +103,93 @@ namespace Tarea2.Formularios
             // 
             // TxtNombreSede
             // 
-            this.TxtNombreSede.Location = new System.Drawing.Point(342, 87);
+            this.TxtNombreSede.Location = new System.Drawing.Point(151, 51);
             this.TxtNombreSede.Name = "TxtNombreSede";
-            this.TxtNombreSede.Size = new System.Drawing.Size(121, 20);
+            this.TxtNombreSede.Size = new System.Drawing.Size(292, 20);
             this.TxtNombreSede.TabIndex = 6;
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.Location = new System.Drawing.Point(342, 123);
+            this.TxtDireccion.Location = new System.Drawing.Point(151, 77);
             this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.Size = new System.Drawing.Size(121, 20);
+            this.TxtDireccion.Size = new System.Drawing.Size(292, 20);
             this.TxtDireccion.TabIndex = 7;
             // 
             // TxtNumTelefono
             // 
-            this.TxtNumTelefono.Location = new System.Drawing.Point(342, 187);
+            this.TxtNumTelefono.Location = new System.Drawing.Point(151, 127);
             this.TxtNumTelefono.Name = "TxtNumTelefono";
-            this.TxtNumTelefono.Size = new System.Drawing.Size(121, 20);
+            this.TxtNumTelefono.Size = new System.Drawing.Size(292, 20);
             this.TxtNumTelefono.TabIndex = 8;
             // 
             // CmbEstadoSede
             // 
+            this.CmbEstadoSede.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbEstadoSede.FormattingEnabled = true;
             this.CmbEstadoSede.Items.AddRange(new object[] {
             "Seleccione",
             "Activo",
             "Inactivo"});
-            this.CmbEstadoSede.Location = new System.Drawing.Point(342, 156);
+            this.CmbEstadoSede.Location = new System.Drawing.Point(151, 103);
             this.CmbEstadoSede.Name = "CmbEstadoSede";
-            this.CmbEstadoSede.Size = new System.Drawing.Size(121, 21);
+            this.CmbEstadoSede.Size = new System.Drawing.Size(292, 21);
             this.CmbEstadoSede.TabIndex = 9;
             // 
             // BtnGuardarSede
             // 
-            this.BtnGuardarSede.Location = new System.Drawing.Point(342, 246);
+            this.BtnGuardarSede.Location = new System.Drawing.Point(151, 163);
             this.BtnGuardarSede.Name = "BtnGuardarSede";
-            this.BtnGuardarSede.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardarSede.Size = new System.Drawing.Size(292, 23);
             this.BtnGuardarSede.TabIndex = 10;
             this.BtnGuardarSede.Text = "Guardar";
             this.BtnGuardarSede.UseVisualStyleBackColor = true;
             this.BtnGuardarSede.Click += new System.EventHandler(this.BtnGuardarSede_Click);
             // 
+            // dgvSedes
+            // 
+            this.dgvSedes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSedes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvSedes.Location = new System.Drawing.Point(12, 207);
+            this.dgvSedes.Name = "dgvSedes";
+            this.dgvSedes.Size = new System.Drawing.Size(529, 164);
+            this.dgvSedes.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID Sede";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nombre";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Dirección";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Estado";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Teléfono";
+            this.Column5.Name = "Column5";
+            // 
             // FrmSedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(553, 393);
+            this.Controls.Add(this.dgvSedes);
             this.Controls.Add(this.BtnGuardarSede);
             this.Controls.Add(this.CmbEstadoSede);
             this.Controls.Add(this.TxtNumTelefono);
@@ -155,6 +203,7 @@ namespace Tarea2.Formularios
             this.Controls.Add(this.label1);
             this.Name = "FrmSedes";
             this.Text = "FrmSedes";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSedes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +222,11 @@ namespace Tarea2.Formularios
         private System.Windows.Forms.TextBox TxtNumTelefono;
         private System.Windows.Forms.ComboBox CmbEstadoSede;
         private System.Windows.Forms.Button BtnGuardarSede;
+        private System.Windows.Forms.DataGridView dgvSedes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

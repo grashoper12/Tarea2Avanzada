@@ -37,14 +37,14 @@ namespace Tarea2.Formularios
 
         private void BtnConsulSedesDeCliente_Click(object sender, EventArgs e)
         {
-            FrmConsultar_Sedes_de_Clientes frmconsultarsedeclientes = new FrmConsultar_Sedes_de_Clientes();
-            frmconsultarsedeclientes.Show();
+            FrmConsultar_Sedes_de_Clientes frmconsultarsedesclientes = new FrmConsultar_Sedes_de_Clientes();
+            frmconsultarsedesclientes.Show();
         }
 
         private void BtnConsulSedes_Click(object sender, EventArgs e)
         {
-            FrmConsultar_Sedes_de_Clientes frmconsultarsedesclientes = new FrmConsultar_Sedes_de_Clientes();
-            frmconsultarsedesclientes.Show();
+            FrmConsultar_Sedes sedes = new FrmConsultar_Sedes();
+            sedes.Show();
         }
 
         private void BtnConsulClientes_Click(object sender, EventArgs e)
@@ -61,8 +61,8 @@ namespace Tarea2.Formularios
 
         private void BtnConsulCupoPorSedes_Click(object sender, EventArgs e)
         {
-            FrmRegistro_Cupo_por_Sedes frmregistrocuposedes = new FrmRegistro_Cupo_por_Sedes();
-            frmregistrocuposedes.Show();
+            FrmConsulta_Cupo_por_Sedes consulta = new FrmConsulta_Cupo_por_Sedes();
+            consulta.Show();
         }
     }
 }
